@@ -1,0 +1,425 @@
+class A
+{
+     x: string = "Ganesan";
+    //static x: string = "Guhan";
+      getRank()
+    {
+          return this.x;
+    }
+}
+
+let obj1 = new A();
+
+console.log(obj1.getRank());
+
+-------------------------------------------
+class A{
+    public static x = 10;
+
+    run()
+    {
+       // console.log(x);// cant find the name x
+        console.log(A.x);
+     }
+}
+
+let obj = new A();
+
+//console.log(obj.x);// property x does not exist
+obj.run();
+console.log(A.x);
+
+A.x = 20;
+
+console.log(A.x);
+
+--------------------------------------------------
+
+
+class A{
+    readonly  x = 10;
+
+    run()
+    {
+       
+        console.log(this.x);
+     }
+}
+
+let obj = new A();
+
+obj.run();
+console.log(obj.x);
+
+obj.x = 20; // cannot assign a constant
+
+
+
+---------------------------------------------------
+
+
+
+
+
+class A{
+
+    rate(x:number)
+    {
+        confirm("yes");
+        console.log(x);
+    }
+}
+let obj1 = new A();
+obj1.rate(10);
+
+--------------------------------------
+
+class A
+{
+    x: string = "Ganesan";
+    constructor()
+    {
+        console.log("I am from constructor");
+    }
+      getRank()
+    {
+          return this.x;
+    }
+}
+
+let obj1 = new A();
+let m: string = obj1.getRank();
+console.log(m);
+
+class B
+{
+    x1: number = 34;
+    constructor(x1)
+    {
+        console.log(x1);
+    }
+}
+
+let obj2 = new B(10);
+
+console.log(obj2.x1);
+
+----------------------------------------
+class A
+{
+        x: string = "Guhan";
+      getRank()
+    {
+          return this.x;
+    }
+}
+
+let obj1 = new A();
+let m: string = obj1.getRank();
+console.log(m);
+
+class B
+{
+    
+    constructor(m)
+    {
+        console.log(m);
+    }
+}
+
+let obj2 = new B(m);
+
+
+--------------------------------------------
+
+class A
+{
+    x: string="Alagan";
+    constructor()
+    {
+          this.x=  "ganesan";
+    }
+}
+let obj1 = new A();
+//console.log(obj1.x);
+
+
+class B extends A
+{
+    
+    getProp()
+    {
+        console.log(this.x);
+    }
+  
+}
+
+let obj2 = new B();
+obj2.getProp();
+
+--------------------------------------------
+class A
+{
+    teach()
+    {
+        console.log("I am a teacher");
+    }
+}
+
+class B extends A
+{
+    
+    getProp()
+    {
+        super.teach();
+    }
+  
+}
+let obj2 = new B();
+obj2.getProp();
+
+-----------------------------------------------
+class A
+{
+    x: string = "Guhan";
+    teach()
+    {
+        console.log("I am a teacher");
+    }
+}
+
+class B extends A
+{
+    
+    getProp()
+    {
+        super.teach();
+    }
+}
+let obj2 = new B();
+obj2.getProp();
+
+class C extends B
+{
+    getA()
+    {
+        console.log(this.x);
+        super.getProp();
+        super.teach();  
+    }
+}
+let obj3 = new C();
+obj3.getA();
+---------------------------------------------------
+
+class A{
+    public x = "public data";
+    private y = "private data";
+    protected z = "protected data";
+}
+let obj1 = new A();
+console.log(obj1.x);
+//console.log(obj1.y);
+//private and protected only accessible within the class
+
+----------------------------------------------------
+
+class A{
+    public x = "public data";
+    private y = "private data";
+    protected z = "protected data";
+    constructor()
+    {
+        console.log(this.x);
+        console.log(this.y);
+        console.log(this.z);
+    }
+}
+let obj1 = new A();
+
+------------------------------------------
+
+class A{
+    public x = "public data";
+    private y = "private data";
+    protected z = "protected data";
+
+    public publicMethod()
+    {
+        console.log(this.z);// true
+        console.log(this.y);//true
+        console.log(this.x);//true
+    }
+}
+
+let obj1 = new A();
+obj1.publicMethod();
+// protected and private can accessible only within the class
+--------------------------------------------
+class A {
+    public x = "public data";
+    private y = "private data";
+    protected z = "protected data";
+
+    public getPublic()
+    {
+        console.log(this.x);
+    }
+        private getPrivate()
+    {
+        console.log(this.y);
+    }
+
+    protected getProtected() {
+        console.log(this.z);
+    }
+}
+
+let obj1 = new A();
+
+class B extends A{
+
+    getMethods()
+    {
+        super.getProtected();
+        super.getPublic();
+    }
+}
+let obj2 = new B();
+
+obj2.getMethods();
+------------------------------------------
+class A
+{
+    getResult(x:number):void
+    {
+
+    }
+}
+
+class B extends A{
+
+    getResult(x:number,y:string):void // error
+    {
+
+    }
+}
+--------------------------------------
+interface Printable
+{
+    run();
+    go();
+}
+
+class Calculate implements Printable{
+
+    run()
+    {
+        console.log("I am running");
+    }
+
+    go()
+    {
+        console.log("I am going");
+    }
+    
+}
+
+let obj = new Calculate();
+obj.go();
+obj.run();
+--------------------------------------------------
+abstract class A{
+    abstract run();
+    abstract x: number;
+    go()
+    {
+        console.log("I am from parent, not abstarct method");
+    }
+}
+//let obj1 = new A();
+class B extends A{
+    x = 10;
+     run()
+     {
+        
+      }
+    come()
+    {
+        console.log("I am walking"); 
+        super.go();  
+        console.log(this.x);
+    }
+  }
+let obj2 = new B();
+-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

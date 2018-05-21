@@ -1,0 +1,192 @@
+class A{
+    public x: string = "public data";
+    private y: string = " Private data";
+    protected z: string = " Protected Data";
+    publicMethod()
+    {
+        console.log(this.x);
+    }
+    privateMethod()
+    {
+        console.log(this.y);
+    }
+    protectedMethod()
+    {
+        console.log(this.z);
+    }
+}
+
+let obj1 = new A();
+
+console.log(obj1.x);
+
+obj1.privateMethod();
+obj1.protectedMethod();
+obj1.publicMethod();
+-------------------------------------------------------
+class A{
+    public x: string = "public data";
+    private y: string = " Private data";
+    protected z: string = " Protected Data";
+   public  publicMethod()
+    {
+        console.log(this.x);
+    }
+   private  privateMethod()
+    {
+        console.log(this.y);
+    }
+  protected  protectedMethod()
+    {
+        console.log(this.z);
+    }
+}
+
+let obj1 = new A();
+
+console.log(obj1.x);
+
+obj1.privateMethod(); // error ( only accessible within the class)
+obj1.protectedMethod();// eroor ( only accessible within the clas)
+obj1.publicMethod();
+-----------------------------------
+class A{
+    public x: string = "public data";
+    private y: string = " Private data";
+    protected z: string = " Protected Data";
+   public  publicMethod()
+    {
+        console.log(this.x);
+    }
+   private  privateMethod()
+    {
+        console.log(this.y);
+    }
+  protected  protectedMethod()
+    {
+        console.log(this.z);
+    }
+}
+
+class B extends A
+{
+    myMethod()
+    {
+        console.log(this.x);
+        console.log(this.z);
+        super.protectedMethod();
+        super.publicMethod();
+   }
+}
+
+let obj2 = new B();
+console.log(obj2.x);
+obj2.myMethod();
+-----------------------------------
+abstract class A{
+    abstract build();
+    teach()//non abstract method
+    {
+        console.log("My parent method");
+    }
+
+}
+class B extends A
+{
+    myChildMethod()
+    {
+        super.teach();    
+    }
+    build()
+    {
+        console.log("My parent abstract method");
+    }
+    teach()
+    {
+        // we can define here
+    }
+
+}
+
+let obj3 = new B();
+
+obj3.build();
+obj3.myChildMethod();
+------------------------------------------------
+
+interface A{
+    build();
+    teach();
+
+}
+class B implements A
+{
+    teach()
+    {
+        
+    }
+    build()
+    {
+        console.log("My parent abstract method");
+    }
+
+}
+
+let obj3 = new B();
+
+
+class C extends B
+{
+
+
+}
+--------------------------------------------------
+
+
+abstract class A{
+    abstract build();
+    teach()//non abstract method
+    {
+        console.log("My parent method");
+    }
+
+}
+class B extends A
+{
+    myChildMethod()
+    {
+        super.teach();    
+    }
+    build()
+    {
+        console.log("My parent abstract method");
+    }
+/*    teach(x:number)  // overriding use only same parameter
+    {
+        // we can define here
+    }
+  /*  teach(x:number,y:number)
+    {
+        // we can define here
+    }
+
+    // overloading
+
+    */
+
+}
+
+let obj3 = new B();
+
+obj3.build();
+obj3.myChildMethod();
+
+
+
+
+
+
+
+
+
+

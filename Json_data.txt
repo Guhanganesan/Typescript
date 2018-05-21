@@ -1,0 +1,25 @@
+let json1 = { "name": "guhan", "mobile": 97918 }
+
+console.log(json1.name);
+console.log(json1.mobile);
+
+let json2 = {
+     
+    "employee":
+        [{
+            "name": "guhan",
+            "age":27
+        },
+        {"name":"anbu","age":25}
+        ],
+    "players": [
+        {
+            "name": "sachin",
+            "age":23
+        }
+    ]
+
+}
+console.log(json2.employee[0].name);
+console.log(json2.employee[1].age);
+console.log(json2.players[0].name);
