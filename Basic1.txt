@@ -1,110 +1,106 @@
-let x: number = 40;
-let y: any = 3.5;
-let z: any = [2, 3, 4, 5];
-console.log(z[2]);
+1. Variables:
 
-//alert(z[1]);
+			let x: number = 40;
+			let y: any = 3.5;
+			let z: any = [2, 3, 4, 5];
+			console.log(z[2]);
+			//alert(z[1]);
 
-function run():void
-{
-    z = 10;
-    console.log(z);
-}
+2. Function and Function Calling:
+ 
+			function run():void
+			{
+				z = 10;
+				console.log(z);
+			}
 
-run();
+			run();
 
-function go()
-{
-    return "How are you";
-}
+3. Calling the function and assigning the return value into a variable
 
-let m = go();
-console.log(m);
+		function go()
+		{
+			return "How are you";
+		}
 
-//let n="";
-let n = null;
-function come()
-{
-    console.log(this.n);
-}
+		let m = go();
+		console.log(m);
+		
+4. Check null and empty value:
 
-come();
+		//let n="";
+		let n = null;
+		function come()
+		{
+			console.log(this.n);
+		}
 
-function rate()
-{
-   /* return function give()
-    {
-        return "10 rupee";
-    }
-    */
-    let z = function ()
-    {
-        return "Rate is 10";
-    }
-    return z();
-}
+		come();
+5. Anonymous Function
 
-let r = rate();
-console.log(r);
+		function rate()
+		{
+		   /* return function give()
+			{
+				return "10 rupee";
+			}
+			*/
+			let z = function ()
+			{
+				return "Rate is 10";
+			}
+			return z();
+		}
+	
+6. Check the truth state of variable
 
-let t1: boolean = true;
-let t2: boolean = false;
+		let r = rate();
+		console.log(r);
 
-function sit( m:boolean)
-{
-    if (m)
-    {
-        return m;
-    }
-    else
-    {
-        return "False";
-   }
-}
+		let t1: boolean = true;
+		let t2: boolean = false;
 
-let s1 = sit(t1);
-let s2 = sit(false);
-console.log(s1);
-console.log(s2);
+		function sit( m:boolean)
+		{
+			if (m)
+			{
+				return m;
+			}
+			else
+			{
+				return "False";
+		   }
+		}
 
+		let s1 = sit(t1);
+		let s2 = sit(false);
+		console.log(s1);
+		console.log(s2);
 
-let json1 = { "name": "guhan", "mobile": 97918 }
+7. Json Handling:
 
-console.log(json1.name);
-console.log(json1.mobile);
+	let json1 = { "name": "guhan", "mobile": 97918 }
 
-let json2 = {
-     
-    "employee":
-        [{
-            "name": "guhan",
-            "age":27
-        },
-        {"name":"anbu","age":25}
-        ],
-    "players": [
-        {
-            "name": "sachin",
-            "age":23
-        }
-    ]
+	console.log(json1.name);
+	console.log(json1.mobile);
+
+	let json2 = {
+		 
+		"employee":
+			[{
+				"name": "guhan",
+				"age":27
+			},
+			{"name":"anbu","age":25}
+			],
+		"players": [
+			{
+				"name": "sachin",
+				"age":23
+			}
+		]
 
 }
 console.log(json2.employee[0].name);
 console.log(json2.employee[1].age);
 console.log(json2.players[0].name);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
