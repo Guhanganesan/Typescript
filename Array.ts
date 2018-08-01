@@ -76,6 +76,29 @@ console.log(x);
 // only one element
 
 
+var x = {
+    "Name": "Guhan",
+    "Age": 28,
+    "Mobile":97918155
+}
+
+console.log(x);
+
+console.log(x.Age);
+
+console.log(Object.keys(x));
+
+console.log(Object.entries(x));
+
+Result:
+
+ObjectAge: 28Mobile: 97918155Name: "Guhan"__proto__: Object
+VM255:7 28
+VM255:8 Array(3)0: "Name"1: "Age"2: "Mobile"length: 3__proto__: Array(0)
+VM255:9 
+
+
+
 
 
 
