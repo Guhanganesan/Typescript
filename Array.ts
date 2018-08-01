@@ -38,4 +38,45 @@ console.log(x.slice(0, 2)); //before 2
 console.log(x.sort());
 
 
+var x = new Array("Ramesh", "Guhan", "Anbu","mathan");
+
+console.log(x.splice(0, 2)); 
+//Ramesh, Guhan
+
+
+x.splice(1, 0, "siva");
+console.log(x);
+/*
+[
+  "Ramesh",
+  "siva",
+  "Guhan",
+  "Anbu",
+  "mathan"
+]
+Insert 1 element at 1st index
+*/
+
+
+x.splice(1, 1, "Siva");
+console.log(x);
+// Insert 1 element at 1st index
+
+
+
+x.splice(2, 2, "T", "N");
+console.log(x);
+
+// Insert two element at 2,3 index
+
+
+x.splice(2, 3, "P");
+console.log(x);
+
+// only one element
+
+
+
+
+
 
