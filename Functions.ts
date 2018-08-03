@@ -1,4 +1,39 @@
-		function run():void
+function add()
+{
+      let x = 10;
+    if (true)
+    {
+      let  x = 20;
+        console.log(x); // different variable
+    }
+    console.log(x);
+}
+add();
+
+Ans:
+20
+10
+
+
+function add()
+{
+      var x = 10;
+    if (true)
+    {
+      var  x = 20;
+        console.log(x);
+    }
+    console.log(x);
+}
+add();
+
+
+Ans:
+
+20
+20
+
+                function run():void
 		{
 		   var  z = 10;
 			console.log(z);
