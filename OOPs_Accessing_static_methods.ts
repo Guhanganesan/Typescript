@@ -13,6 +13,7 @@ class Surya  extends Siva
     dance()
     {
         console.log(Siva.acc);
+        Siva.act();
     }
 }
 
@@ -22,4 +23,6 @@ Surya.act();// Accessing the static method
 
 Result:
 769869
-VM180:18 He is acting
+He is acting
+
+
