@@ -43,6 +43,16 @@ var res1= arr.find(
 );
 console.log(res1);
 
+var arr=[3,4,1,6,8,9,7];
+arr.forEach(
+    function(element)
+    {
+     console.log(element);
+    }
+);
+
+
+
 
 /*
 
@@ -50,5 +60,13 @@ console.log(res1);
 VM72:5 (7) [3, 4, 1, 6, 10, 10, 10]
 VM72:9 [4]
 VM72:13 4
+
+3
+VM73:4 4
+VM73:4 1
+VM73:4 6
+VM73:4 8
+VM73:4 9
+VM73:4 7
 
 */
