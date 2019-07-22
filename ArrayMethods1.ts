@@ -11,7 +11,7 @@ console.log(x);
 //------------------------//
 var y=x.slice(0,3); //0 to 2
 console.log(y);
-x.splice(1,0,100);
+x.splice(1,0,100);   //(start, deleteCount, value)
 console.log(x);
 x[3]=90;
 console.log(x);
