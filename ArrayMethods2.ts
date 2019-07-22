@@ -20,3 +20,35 @@ VM305:9 25,15,5,30,40,20,10
 VM305:11 (8) [25, 15, 5, 30, 40, 20, 10, 4]
 
 */
+
+
+var arr=[3,4,1,6,8,9,7];
+console.log(arr.concat(5));
+arr.fill(10,4);
+console.log(arr);
+
+var res =[5,7,8,4,9].filter(
+    function(element)
+    {
+       return element==4;
+    }
+    );
+console.log(res);
+
+var res1= arr.find(
+    function(element)
+    {
+       return element==4;
+    }
+);
+console.log(res1);
+
+
+/*
+
+(8) [3, 4, 1, 6, 8, 9, 7, 5]
+VM72:5 (7) [3, 4, 1, 6, 10, 10, 10]
+VM72:9 [4]
+VM72:13 4
+
+*/
