@@ -1,0 +1,37 @@
+//Searching:-
+
+var x=[2,5,7,4,8];
+var search=1;
+var check=false;
+for(var i=0; i<x.length; i++)
+{
+    if(search==x[i])
+    {
+        check=true;
+    }
+}
+if(check==true)
+{
+    console.log("Avaiable");
+}
+else
+{
+    console.log("Not Available");
+}
+
+------------------------------------
+//Sorting:-
+
+var x=[2,5,7,4,8,0,-2,3];
+var temp=0;
+for(var i=0; i<x.length; i++)
+{
+    for(var j=i+1;j<x.length;j++)
+    if(x[i]>x[j])
+    {
+        temp=x[j];
+        x[j]=x[i];
+        x[i]=temp;
+    }
+}
+console.log(x);
