@@ -20,6 +20,4 @@ obj.collectFee(10);
 
 obj=new Diploma();
 obj.collectFee(10);
-
-
 (<College> obj).collectFee(20);
