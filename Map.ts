@@ -23,6 +23,10 @@ for (let value of servers.values()) {
 for (let entry of servers.entries()) {  
     console.log(entry[0], entry[1]);   
 } 
+console.log("----------------------------------")
+servers.forEach((value, key) => {
+    console.log(key, value);
+});
 
 console.log("-------- server details ---------");
 console.log(servers);
