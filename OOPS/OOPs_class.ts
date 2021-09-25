@@ -1,7 +1,7 @@
 class Kala
 {
     public name = "Kala";
-     ondrser()
+    ondrser()
     {
          console.log("Ondruser");
     }
